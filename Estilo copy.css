@@ -1,0 +1,34 @@
+ /* Selector de etiqueta */
+
+h1 {
+	text-align: center;
+	color: rgb(255, 0, 0);
+}
+
+footer {
+    background-color: #9d904c;
+    font-size: 12px;
+}
+
+ /* Selector de clase */
+.colorclss {
+    color: rgb(193, 199, 147);
+}
+ /* Selector de id */
+#datosPer {
+    font-size: large;
+    color: rgb(2, 12, 119);
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ /* Selector Universal */
+* {
+	margin: 20;
+	padding: 30;
+}
+
+/* Selector pseudoclase*/
+button:hover {
+    background-color: #F89B4D;
+  }

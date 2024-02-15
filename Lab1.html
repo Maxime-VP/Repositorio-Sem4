@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
-
+    
 <head>
+    
     <title>
         Lab 1
     </title>
+    <link rel="stylesheet" href="C:\Users\Maxime\Desktop\Tec de Monterrey\Semestre 4\8 creditos\Lab 1\Estilo.css">
        
     <h1> Laboratorio 1 </h1>
-    <h2> Maxime Vilcocq Parra <br> A01710550 <br> a01710550@tec.mx </h2>
+    <h2 class="colorclss"> Maxime Vilcocq Parra <br> A01710550 <br> a01710550@tec.mx </h2>
 </head>
 
 <body>
+
 <img src="C:\Users\Maxime\Desktop\09b87637-5f94-473c-8a2a-b9dc9627c1ce.jpg" style= "width: 250px; height: 300;">
 
-<h4>
-Mi nombre es Maxime Vilcocq, soy estudiante de ITC (Ingenieria en Tecnologias Computacionales). Me gustan mucho los videojuegos, el basquetbol y mi gata (Suki).
+<h4 id="datosPer"> Mi nombre es Maxime Vilcocq, soy estudiante de ITC (Ingenieria en Tecnologias Computacionales). Me gustan mucho los videojuegos, el basquetbol y mi gata (Suki).</h4>
 
 <style>
     #imagen {
@@ -25,6 +27,7 @@ Mi nombre es Maxime Vilcocq, soy estudiante de ITC (Ingenieria en Tecnologias Co
 <button onclick="mostrarImagen()">Mostrar Imagen</button>
 
 <!-- Imagen oculta -->
+
 <img id="imagen" src="Suki.jpg" alt="Imagen" style="width: 600px;">
 
 <script>
@@ -39,7 +42,7 @@ Mi nombre es Maxime Vilcocq, soy estudiante de ITC (Ingenieria en Tecnologias Co
     }
 </script>
 
-</h4>
+
 
 <ol>
 <li><strong> ¿Cuál es la diferencia entre Internet y la World Wide Web? </strong></li>
@@ -213,6 +216,50 @@ Un error en los permisos: los permisos de acceso a los archivos y carpetas princ
 
 </ol>
 
+<h1>Laboratorio 3</h1>
+
+<ol>
+    <li>
+        Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS? 
+    </li>
+    <h4>
+        !important permite darle prioridad a un estilo particular, por lo que es útil cuando se utilizan varias etiquetas iguales, con el mismo formato y al mismo tiempo se requiere aplicar un estilo distinto a una o pocas instancias de la misma etiqueta.
+        No es recomendable utilizarlo demasiado, pues en exceso puede hacer que sea difícil comprender el código.
+    </h4>
+
+
+    <li>
+        Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?
+    </li>
+    <h4>
+        Una imagen puede distraer la atención de quien vea la página y si es muy ruidosa o coincide con los colores del texto, puede dificultar la visualización del contenido de la misma.
+        De igual forma, si la imagen es demasiado pesada puede también hacer que la página tarde más en cargar.
+    </h4>
+
+
+    <li>
+        Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?
+    </li>
+    <h4>
+        Se recomienda utilizar % cuando el diseño tiene que adaptarse a diferentes tamaños de pantalla, y se recomienda utilizar px sobre pt para cuando se quiere un tamaño fijo.
+    </h4>
+
+
+    <li>
+        ¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?
+    </li>
+    <h4>
+        <ul>
+        La minificación de CSS reduce el tamaño de los archivos de hojas de estilo CSS en cascada para que se carguen más rápido. 
+        La minificación de CSS funciona al eliminar todos los caracteres y espacios innecesarios del marcado CSS sin afectar cómo lo interpretan los navegadores.
+        <br>Los archivos CSS contienen las instrucciones para dar formato a los elementos HTML. Cuando se cargan más rápido, las páginas web se cargan más rápido en general
+        </ul>
+        <br> (Cloudflare s.f.)
+    </h4>
+</ol>
+
+
+
 </body>
 
 
@@ -222,6 +269,8 @@ Un error en los permisos: los permisos de acceso a los archivos y carpetas princ
     <h3> Bibliografia </h3>
     <p> 
         <br>Concepto (s.f.) URL. Recuperado de https://concepto.de/url/
+        <br>
+        <br>Cloudflare (s.f.) Cómo minificar el CSS para mejorar el rendimiento del sitio web. Recuperado de https://www.cloudflare.com/es-es/learning/performance/how-to-minify-css/#:~:text=Las%20hojas%20de%20estilo%20CSS%20en%20cascada%20son,hace%20que%20los%20archivos%20CSS%20sean%20m%C3%A1s%20peque%C3%B1os.
         <br>
         <br>Creación de páginas web (2023) Error 404: ¿Qué significa y cómo solucionarlo? Recuperado de https://www.ionos.mx/digitalguide/paginas-web/creacion-de-paginas-web/que-significa-el-error-404-not-found/
         <br>
@@ -248,9 +297,10 @@ Un error en los permisos: los permisos de acceso a los archivos y carpetas princ
         <br>Tutorialspoint (s.f.) HTML5 - Deprecated Tags & Attributes. Recuperado de https://www.tutorialspoint.com/html5/html5_deprecated_tags.htm
         <br>
         <br>Walton, A. (s.f.) Qué es HTML5: Y sus Diferencias con HTML4 (HTML). Recuperado de https://htmldesdecero.es/blog/html5-diferencias-html/
-
+        
 
     </p>
+    
 </footer>
 
 </html>
