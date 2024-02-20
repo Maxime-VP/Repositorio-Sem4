@@ -239,6 +239,7 @@ let miCalculadora = CalculadoraPropinas.crearCalculadora(50, 15);
 miCalculadora.imprimirDetallePago(); // Imprime el detalle del pago
 
 
+
 /*
 console.log ("Esto es un log")
 console.info("Esto es info")
