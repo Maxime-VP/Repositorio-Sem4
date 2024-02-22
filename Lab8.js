@@ -183,9 +183,16 @@ const promedio =() =>{
     for (let count in arreglo2){
         suma=suma + arreglo2[count];
     };
-    
+    console.log("Ejercicio1")
     console.log(suma/arreglo2.length);
 }
 
 promedio();
     
+const string = "Messi es el mejor jugador del mundo";
+const ejercicio2 = () => {
+  const filesystem = require("fs");
+  filesystem.writeFileSync("Ejercicio 2.txt", string);
+}
+
+ejercicio2();
