@@ -170,3 +170,22 @@ const server = http.createServer((request, response) => {
 //escucha, es decir no mata el programa, se recomienda que el canal sea arriba de 1000, preferible el 3000
 //ctrl c para matar el servidor
 server.listen(3000);
+
+
+
+const arreglo2 = [20,30,40,10,7,7,7,1000];
+
+const promedio =() =>{
+
+    let suma= 0;
+    let count=0;
+
+    for (let count in arreglo2){
+        suma=suma + arreglo2[count];
+    };
+    
+    console.log(suma/arreglo2.length);
+}
+
+promedio();
+    
