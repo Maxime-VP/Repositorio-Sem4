@@ -1,0 +1,11 @@
+
+#commonly ignored files
+
+#node artifact files
+node_modules/
+dist/
+
+#Compiled Java Class files
+*.class
+
+

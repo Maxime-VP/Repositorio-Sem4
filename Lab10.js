@@ -1,5 +1,6 @@
 
 
+
 console.log("Corriendo Lab10");
 
 
@@ -96,7 +97,7 @@ const footer = `
 const construcciones = [{nombre: "casa", imagen: "https://i.blogs.es/7cfcd0/casas-en-minecraft/1366_2000.jpeg"}];
 
 
-
+const filesystem = require('fs');
 const http = require('http');
 const fs = require('fs');
 
@@ -258,6 +259,10 @@ const server = http.createServer((request, response) => {
  
 
 
+
+
+
+  
   else if (request.url == "/minecraft") {
 
     response.setHeader('Content-Type', 'text/html');
@@ -269,6 +274,14 @@ const server = http.createServer((request, response) => {
 
     let tarjetas_construcciones = '';
     for(let construccion of construcciones) {
+
+
+      //esto se encuentra en el metodo get, pero lo ideal seria tenerlo en el post para que se guarde al mandar y no al 
+      //regresar a la pag principal
+      filesystem.appendFileSync('Lab10.txt', construccion.nombre);
+      filesystem.appendFileSync('Lab10.txt', "\n");
+      //
+
       tarjetas_construcciones += `
         <div class="column">
             <div class="card">
@@ -327,6 +340,7 @@ const server = http.createServer((request, response) => {
 
     const datos = [];
 
+    //Como el asincronous sort, espera a que deje de recibir datos
     request.on('data', (dato) => {
         console.log(dato);
         datos.push(dato);
@@ -340,12 +354,24 @@ const server = http.createServer((request, response) => {
         const imagen = datos_completos.split('&')[1].split('=')[1];
         console.log(imagen);
         construcciones.push({nombre: nombre, imagen: imagen});
+
+
+        response.write(header);
+    response.write(`
+      <h1 class="title">Agregar una construcción</h1>
+        <form action="/construir" method="POST">
+          <label class="label" for="nombre">Nombre</label>
+          <input name="nombre" id="nombre" type="text" class="input"><br>
+          <label class="label" for="imagen">Imagen</label>
+          <input name="imagen" id="imagen" type="text" class="input"><br><br>
+          <input class="button is-success" type="submit" value="Construir">
+        </form>
+    `);
+    response.write(footer);
         return response.end();
     });
 
   }
-
-
 
 
 

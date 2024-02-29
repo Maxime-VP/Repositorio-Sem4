@@ -106,13 +106,25 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: false}));
 
+// const construcciones = [
+//     {
+//         nombre: "casa",
+//         imagen: "ruta",
+//     }
+// ];
+
+
+
+//Middleware
+app.use((request, response, next) => {
+    console.log('Middleware!');
+    next(); //Le permite a la petición avanzar hacia el siguiente middleware
+});
+
+
 const rutasConstrucciones = require('./routes/construcciones.routes');
 
 app.use('/', rutasConstrucciones);
-
-const rutasConstrucciones2 = require('./routes/random.routes');
-
-app.use('/', rutasConstrucciones2);
 
 app.use((request, response, next) => {
     response.status(404);
