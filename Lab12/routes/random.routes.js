@@ -91,12 +91,26 @@ const footer = `
 </html>
 `;
 
-router.get('/random', (request, response, next) => {
+router.get('/templates', (request, response, next) => {
     response.write(header);
     response.write(`
-      <h1 class="title">URL RANDOM: Qué es el archivo package.json</h1>
-      <div> El archivo package.json es un archivo de configuración utilizado principalmente en proyectos de Node.js para describir el proyecto y gestionar sus dependencias. </div>
-    `);
+      <h1 class="title">¿Qué otros templating engines existen para node?: </h1>
+      <div> Además de los populares motores de plantillas como Handlebars y EJS, hay varios otros motores de plantillas disponibles para Node.js. Algunos de ellos incluyen:
+      <br>
+      Pug (anteriormente conocido como Jade): Es un motor de plantillas de alto rendimiento con una sintaxis concisa y poderosa. Pug permite escribir HTML de forma más eficiente utilizando indentación y mixins.
+      <br>
+      Mustache.js: Es un sistema de plantillas lógicas sin lógica. No tiene ninguna lógica incorporada y se enfoca en la simplicidad y la legibilidad. Es compatible con una variedad de lenguajes de programación, incluido JavaScript para Node.js.
+      <br>
+      Nunjucks: Es un motor de plantillas inspirado en Jinja2 para Python. Es potente y flexible, con características como herencia de plantillas, macros, filtros y bloques.
+      <br>
+      EJS (Embedded JavaScript): Aunque mencionaste EJS en tu pregunta, vale la pena resaltar que es una opción popular y ampliamente utilizada. Permite incrustar JavaScript dentro de las plantillas HTML, lo que lo hace flexible y poderoso.
+      <br>
+      Marko.js: Desarrollado por eBay, es un motor de plantillas orientado al rendimiento que se puede utilizar tanto en el lado del cliente como en el servidor. Marko.js ofrece características como el pre-renderizado en el lado del servidor y la actualización eficiente del DOM en el lado del cliente.
+      <br>
+      Hogan.js: Es un motor de plantillas inspirado en Mustache pero con un rendimiento mejorado. Proporciona una sintaxis simple y es compatible con la precompilación de plantillas para un mejor rendimiento en producción. </div>
+      <br>
+      OpenAI. (2024). "¿Qué otros templating engines existen para node?" [Consulta realizada el 4 de marzo de 2024].
+      `);
     response.write(footer);
     response.end();
   });
