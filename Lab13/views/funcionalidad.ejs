@@ -1,0 +1,25 @@
+<%- include('includes/head.ejs') %>
+
+<h1 class="title">Agrega zapatos</h1>
+
+<!-- Cuidado con form action -->
+      <form action="/funcionalidad" method="POST">
+        <label class="label" for="nombre">Nombre</label>
+        <input name="nombre" id="nombre" type="text" class="input"><br>
+        <label class="label" for="imagen">Imagen</label>
+        <input name="imagen" id="imagen" type="text" class="input"><br><br>
+        <!-- Cuidado con value  -->
+        <input class="button is-success" type="submit" value="Funcionalidad">
+      </form>
+
+      <h1>¿Qué beneficios encuentras en el estilo MVC?</h1>
+
+      <h2>Te permite tener separado cada parte de tu codigo, sobre todo separar el diseño de la aplicacion de su logica (que a su vez ayuda a comprender y modificar partes individuales). Ademas, te permite reutilizar varias partes de tu codigo (en este caso los encabezados y 
+        pies de cada ruta)</h2>
+
+      <h1>¿Encuentras alguna desventaja en el estilo arquitectónico MVC?</h1>
+
+      <h2>Al comienzo puede resultar dificil comprender como crear y como lograr que interactuen las diferentes capas del programa, de igual forma, para programas muy simples o pequeños puede añadir trabajo innecesario</h2>
+
+      
+<%- include('includes/foot.ejs') %>
