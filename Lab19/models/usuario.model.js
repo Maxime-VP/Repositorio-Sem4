@@ -12,7 +12,7 @@ module.exports = class Usuario {
     save() {
         return bcrypt.hash(this.password, 12).then((password_cifrado) => {
             return db.execute(
-                'INSERT INTO usuarios (idusuarios, password) VALUES (?, ?)',
+                'INSERT INTO usuarios (username, password) VALUES (?, ?)',
                 [this.username, password_cifrado]
                 );
             })
@@ -23,7 +23,17 @@ module.exports = class Usuario {
     }
     static fetchOne(username, password) {
         return db.execute(
-            'SELECT * FROM usuarios WHERE idusuarios=?', 
+            'SELECT * FROM usuarios WHERE username=?', 
+            [username]);
+    }
+
+    static getPermisos(username) {
+        return db.execute(
+            `SELECT funcion 
+            FROM usuarios u, asigna a, rol r, posee p, permiso per
+            WHERE u.username = ? AND u.username = a.username
+            AND a.idrol = r.id AND r.id = p.idrol 
+            AND p.idpermiso = per.id`, 
             [username]);
     }
 }
