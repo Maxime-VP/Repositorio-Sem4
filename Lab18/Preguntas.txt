@@ -1,0 +1,24 @@
+¿Qué otras formas de autentificación existen?
+
+    En este programa validamos la autentificación por medio de passwords. Utilizando bcrypt para cifrarlos.
+
+    Otros tipos de autentificación existentes son:
+
+        Biometría: Este método utiliza características físicas únicas del usuario, como huellas dactilares, iris, voz o 
+    reconocimiento facial, para verificar su identidad
+    
+        Autenticación de dos factores (2FA) y multifactor (MFA): Estos métodos requieren más de una forma de autenticación para 
+    verificar la identidad del usuario. Por ejemplo, podría combinarse el uso de una contraseña con un código enviado a un 
+    dispositivo móvil.
+       
+        Certificados digitales: Los certificados digitales son archivos electrónicos que vinculan la identidad de un usuario 
+    a una clave pública y se utilizan para verificar la autenticidad de un usuario en línea.
+        
+        Autenticación basada en contexto: Este enfoque analiza factores como la ubicación del usuario, el dispositivo 
+    utilizado y el comportamiento típico del usuario para determinar si la autenticación es válida.
+        
+        Contraseñas de un solo uso (OTP): Son contraseñas que solo se pueden usar una vez y se generan generalmente mediante 
+    una aplicación móvil o un dispositivo físico.
+
+
+ChatGPT. (2024). "¿Qué formas de autenticación existen?" [Mensaje de chat]. OpenAI.

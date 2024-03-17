@@ -1,0 +1,66 @@
+¿En qué consiste el control de acceso basado en roles?
+
+    Consiste en restringir y habilitar los permisos (o en otras palabras la funcionalidad) de un programa de forma en que cada 
+    usuario puede hacer cosas distintintas basándose en el rol que tengan asignados.
+
+Investiguen y describan 2 sistemas, uno que aplique RBAC y uno que no. Realicen un análisis de las ventajas y 
+desventajas de cada uno con respecto al control de acceso.
+
+    
+    Sistema con RBAC: Sistema de Gestión de Biblioteca
+
+        En un sistema de gestión de biblioteca que utiliza el control de acceso basado en roles (RBAC), se podrían establecer 
+        los siguientes roles y permisos:
+
+        Roles:
+
+        Bibliotecario: Tiene permisos para agregar, editar y eliminar libros, así como para gestionar las cuentas de los 
+        usuarios.
+        Usuario registrado: Puede buscar y solicitar préstamos de libros.
+        Administrador del sistema: Tiene permisos para realizar tareas de mantenimiento y administración del sistema.
+        Permisos:
+
+        Agregar libros
+        Editar libros
+        Eliminar libros
+        Realizar préstamos
+        Realizar devoluciones
+        Administrar cuentas de usuarios
+        Realizar tareas de mantenimiento del sistema
+        
+            Ventajas del RBAC:
+
+        - Simplicidad en la administración: La asignación de roles facilita la gestión de permisos, ya que se asignan a grupos 
+        de usuarios en lugar de a cada usuario individualmente.
+        - Seguridad mejorada: Reduce el riesgo de errores y acceso no autorizado, ya que los permisos están estructurados y 
+        asignados de manera coherente.
+        -  Escalabilidad: Es fácil agregar nuevos roles o modificar los permisos existentes según las necesidades del sistema.
+        
+            Desventajas del RBAC:
+
+        - Rigidez: Puede resultar difícil de implementar en sistemas donde los roles no son claramente definidos o cambian con 
+        frecuencia.
+        - Complejidad inicial: Requiere una planificación cuidadosa y un diseño inicial para establecer los roles y permisos 
+        adecuados.
+
+
+    Sistema sin RBAC: Sistema de Compartición de Archivos P2P
+
+        En un sistema de compartición de archivos P2P (peer-to-peer) que no utiliza RBAC, los usuarios pueden acceder y 
+        compartir archivos libremente sin restricciones basadas en roles. Cada usuario tiene control total sobre los archivos que comparte y accede.
+
+            Ventajas sin RBAC:
+
+        - Flexibilidad: Los usuarios tienen total libertad para compartir y acceder a archivos según sus necesidades y 
+        preferencias.
+        - Sencillez: No hay necesidad de gestionar roles y permisos, lo que puede simplificar la implementación y administración 
+        del sistema en entornos pequeños.
+        
+            Desventajas sin RBAC:
+
+        - Riesgo de seguridad: Los archivos pueden estar expuestos a accesos no autorizados o malintencionados, ya que no hay 
+        restricciones basadas en roles.
+        - Dificultad en la gestión de permisos: Conforme el sistema crece, se vuelve más difícil gestionar quién puede acceder 
+        o modificar qué archivos.
+        - Falta de control: No hay manera de limitar ciertas acciones a grupos específicos de usuarios, lo que puede llevar a 
+        problemas de seguridad y privacidad.
